@@ -9,3 +9,15 @@
     grid-template-columns: repeat(3,1fr);
     gap: 50px;
 }
+.sideBar{
+    background: #FFE0B3;
+}
+.orderSummary{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.orderInfo{
+    margin-left: 20px;
+}
