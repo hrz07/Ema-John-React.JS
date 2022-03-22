@@ -3,10 +3,32 @@
     height: 490px;
     border: 1px solid lightgray;
     border-radius: 8px;
+    position: relative;
 }
 
 .productCart img{
     height: 265px;
     width: 265px;
     padding: 12px;
+}
+.productDetails{
+    padding: 12px;
+}
+.productName{
+    font-weight: 600;
+}
+.cartFooter{
+    width: 100%;
+    background: #FFE0B3;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.cartFooter:hover{
+    background:orange;
 }
