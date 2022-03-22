@@ -1,0 +1,19 @@
+.navContainer{
+    background: #1C2B35;
+    display: flex;
+    align-items: center;
+    height : 80px;
+    justify-content: space-between;
+}
+.navContainer img{
+    margin-left: 70px;
+}
+.navContainer li{
+    list-style: none;
+    color: white;
+    margin: 0 20px;
+}
+.list{
+    display: flex;
+    margin-right: 70px;
+}
