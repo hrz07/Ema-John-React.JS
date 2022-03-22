@@ -1,0 +1,12 @@
+.productCart{
+    width: 290px;
+    height: 490px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.productCart img{
+    height: 265px;
+    width: 265px;
+    padding: 12px;
+}
