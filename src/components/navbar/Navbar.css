@@ -7,11 +7,16 @@
 }
 .navContainer img{
     margin-left: 70px;
+    cursor: pointer;
 }
 .navContainer li{
     list-style: none;
     color: white;
     margin: 0 20px;
+    cursor: pointer;
+}
+.navContainer li:hover{
+    color: orangered;
 }
 .list{
     display: flex;
