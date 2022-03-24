@@ -6,9 +6,9 @@ const Navbar = () => {
         <div className='navContainer'>
            <img src={img} alt="" srcset="" />
            <div className='list'>
-                <li>Other</li>
-                <li>Order Review</li>
-                <li>Manage Inventory</li>
+                <a href="">Other</a>
+                <a href="">Order Review</a>
+                <a href="">Manage Inventory</a>
            </div>
         </div>
     );
