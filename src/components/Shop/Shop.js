@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import Sidebar from '../Sidebar/Sidebar';
 import './Shop.css'
 
 const Shop = () => {
@@ -24,11 +25,7 @@ const Shop = () => {
                }
             </div>
             <div className="sideBar">
-                <p className='orderSummary'>Order Summary</p>
-                <div className='orderInfo'>
-                     <p>Selected Items: {order.length}</p>
-                </div>
-                
+                <Sidebar order={order} />
             </div>
         </div>
     );
