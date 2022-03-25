@@ -3,3 +3,7 @@
     text-align: center;
     font-weight: 500;
 }
+.sidebarInfoContainer{
+    position: sticky;
+    top: 25vh;
+}
