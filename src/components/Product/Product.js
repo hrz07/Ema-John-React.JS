@@ -2,7 +2,7 @@ import React from 'react';
 import { BsCartPlusFill } from 'react-icons/bs';
 import './Product.css'
 
-const Product = ({ product,addToCart }) => {
+const Product = ({ product, addToCart }) => {
 
     return (
         <div className='productCart'>

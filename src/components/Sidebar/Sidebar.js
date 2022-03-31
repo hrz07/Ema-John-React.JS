@@ -2,7 +2,7 @@ import React from 'react';
 import './Sidebar.css'
 
 const Sidebar = ({ order }) => {
-    console.log(order)
+ 
     let totalPrice = 0;
     let shipingCharge = 0;
     

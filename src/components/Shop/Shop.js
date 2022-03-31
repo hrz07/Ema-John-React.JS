@@ -12,8 +12,21 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[])
 
+    console.log(order, order.length);
     const addToCart = (product) => {
-        let selectedProduct = [...order,product];
+
+        let selectedProduct = []
+
+        const duplicateItem = order.find(item => item.id == product.id)
+        if (!duplicateItem) {
+            product.quantity = 1;
+            selectedProduct = [...order,product]
+        } else {
+            let rest = order.filter(item => item.id !== product.id)
+            product.quantity = product.quantity + 1;
+            selectedProduct = [...rest,product]
+        }
+
         setOrder(selectedProduct);
     }
 
