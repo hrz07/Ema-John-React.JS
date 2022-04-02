@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { getDataFromDb, setDataInDb } from '../../utilities/localStorage';
 import Product from '../Product/Product';
 import Sidebar from '../Sidebar/Sidebar';
 import './Shop.css'
@@ -12,6 +13,21 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[])
 
+    useEffect(() => {
+            
+        let storedData = getDataFromDb()
+        let savedCart = [];
+
+        for (const id in storedData) {
+            const findProduct = products.find(item => item.id == id)
+            if (findProduct) {
+                findProduct.quantity = storedData[id]
+                savedCart.push(findProduct)
+            }
+        }
+
+      setOrder(savedCart)  
+    },[products])
 
     const addToCart = (product) => {
 
@@ -27,6 +43,7 @@ const Shop = () => {
             selectedProduct = [...rest,product]
         }
 
+        setDataInDb(product.id)
         setOrder(selectedProduct);
     }
 
