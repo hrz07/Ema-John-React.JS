@@ -3,11 +3,13 @@ import './Sidebar.css'
 
 const Sidebar = ({ order }) => {
  
+
     let totalPrice = 0;
     let shipingCharge = 0;
-    
+    let quantity = 0
     for(const orderedProduct of order){
-        totalPrice = totalPrice + orderedProduct.price;
+        quantity = quantity + orderedProduct.quantity
+        totalPrice = totalPrice + orderedProduct.price*quantity;
         shipingCharge = shipingCharge + orderedProduct.shipping;
     }
 
@@ -21,6 +23,7 @@ const Sidebar = ({ order }) => {
             <p className='sidebarTitle'>Order Summary</p>
             <div className="orderInfo">
                 <p><small>Selected Items: ${order.length}</small></p>
+                <p><small>Total quantity: ${quantity}</small></p>
                 <p><small>Total Price: ${totalPrice}</small></p>
                 <p><small>Total Shipping Charge: ${shipingCharge}</small></p>
                 <p><small>Tax: ${tax.toFixed(2)}</small></p>

@@ -12,7 +12,7 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[])
 
-    console.log(order, order.length);
+
     const addToCart = (product) => {
 
         let selectedProduct = []

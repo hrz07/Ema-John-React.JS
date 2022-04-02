@@ -4,10 +4,12 @@
 }
 .products{
     margin-top: 50px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
+    padding: 0 80px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 50px;
+    grid-row-gap: 30px;
+   
 }
 .sideBar{
     background: #FFE0B3;
