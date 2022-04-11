@@ -1,0 +1,8 @@
+.orderContainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 50px;
+}
+.sideBar{
+    background: #FFE0B3;
+}

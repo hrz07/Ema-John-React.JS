@@ -6,4 +6,5 @@
 .sidebarInfoContainer{
     position: sticky;
     top: 25vh;
+    margin-bottom: 50px;
 }

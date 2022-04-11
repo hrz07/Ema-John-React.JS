@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import img from '../../images/Logo.svg'
 import './Navbar.css'
 const Navbar = () => {
     return (
         <div className='navContainer'>
-           <img src={img} alt="" srcset="" />
+         <Link to='/'><img src={img} /></Link> 
            <div className='list'>
-                <a href="">Other</a>
-                <a href="">Order Review</a>
-                <a href="">Manage Inventory</a>
+                <NavLink to='/order'>Order</NavLink>
+                <NavLink to='/others'>Order Review</NavLink>
+                <NavLink to='/inventory'>Manage Inventory</NavLink>
            </div>
         </div>
     );
