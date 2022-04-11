@@ -19,4 +19,7 @@ const setDataInDb = (id) => {
     localStorage.setItem("Cart_data", JSON.stringify(storage));
 }
 
-export {getDataFromDb,setDataInDb}
+export { getDataFromDb, setDataInDb }
+
+
+

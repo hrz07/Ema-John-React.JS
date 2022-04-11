@@ -9,7 +9,7 @@ const Sidebar = ({ order }) => {
     let quantity = 0
     for(const orderedProduct of order){
         quantity = quantity + orderedProduct.quantity
-        totalPrice = totalPrice + orderedProduct.price*quantity;
+        totalPrice = totalPrice + orderedProduct.price*orderedProduct.quantity;
         shipingCharge = shipingCharge + orderedProduct.shipping;
     }
 

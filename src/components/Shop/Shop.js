@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { getDataFromDb, setDataInDb } from '../../utilities/localStorage';
+import useProducts from '../Hooks/useProducts';
 import Product from '../Product/Product';
 import Sidebar from '../Sidebar/Sidebar';
 import './Shop.css'
 
 const Shop = () => {
-    const [products,setProducts] = useState([])
     const [order,setOrder] = useState([])
-    useEffect(()=>{
-        fetch('products.json')
-        .then(res => res.json())
-        .then(data => setProducts(data))
-    },[])
+    const [products,setProducts]=useProducts()
 
     useEffect(() => {
             
@@ -28,6 +24,7 @@ const Shop = () => {
 
       setOrder(savedCart)  
     },[products])
+
 
     const addToCart = (product) => {
 
