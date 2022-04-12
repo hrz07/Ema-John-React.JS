@@ -19,7 +19,18 @@ const setDataInDb = (id) => {
     localStorage.setItem("Cart_data", JSON.stringify(storage));
 }
 
-export { getDataFromDb, setDataInDb }
+const deleteInDb = (id) => {
+    const restData = getDataFromDb()
+    if (restData) {
+        if (id in restData) {
+            delete restData[id];
+            localStorage.setItem("Cart_data", JSON.stringify(restData));
+        }
+    }
+
+}
+
+export { getDataFromDb, setDataInDb,deleteInDb }
 
 
 

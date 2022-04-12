@@ -1,7 +1,8 @@
 import React from 'react';
+import { MdDeleteForever } from 'react-icons/md';
 import './OrderCart.css'
 
-const Ordercart = ({orderCart}) => {
+const Ordercart = ({orderCart,deleteCart}) => {
     return (
         <div className='CartDesign'>
             <div className='CartInfo'>
@@ -14,6 +15,7 @@ const Ordercart = ({orderCart}) => {
                 </div>
             </div>
             <div>
+                <MdDeleteForever className='deleteIcon' onClick={()=> deleteCart(orderCart.id)} />
             </div>
         </div>
     );
