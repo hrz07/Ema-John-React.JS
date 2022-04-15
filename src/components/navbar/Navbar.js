@@ -9,7 +9,9 @@ const Navbar = () => {
            <div className='list'>
                 <NavLink to='/order'>Order</NavLink>
                 <NavLink to='/others'>Order Review</NavLink>
-                <NavLink to='/inventory'>Manage Inventory</NavLink>
+                <NavLink to='/inventory'>Inventory</NavLink>
+                <NavLink to='/about'>About</NavLink>
+                <NavLink to='/Login'>Login</NavLink>
            </div>
         </div>
     );
